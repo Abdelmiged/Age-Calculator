@@ -1,0 +1,283 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* html,
+body {
+    height: 100vh;
+} */
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+    /* Colors */
+    --clr-purple: hsl(259, 100%, 65%);
+    --clr-light-red: hsl(0, 100%, 67%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-off-white: hsl(0, 0%, 94%);
+    --clr-light-gray: hsl(0, 0%, 86%);
+    --clr-smoke-gray: hsl(0, 1%, 44%);
+    --clr-off-black: hsl(0, 0%, 8%);
+
+
+    /* Element Colors */
+    --clr-input-border: hsl(0, 0%, 92%);
+    --clr-hr: hsl(0, 0%, 93%);
+
+    /* Font Family */
+    --ff-poppins: 'Poppins', sans-serif;
+
+
+    /* Font Weights */
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+
+
+    /* Margin */
+    --margin-input-container: 1rem;
+
+
+    /* Padding */
+    --padding-container: 2.5rem;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.flex-warp {
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+body {
+    background-color: var(--clr-off-white);
+    font-family: var(--ff-poppins);
+    padding: 2.5rem 1rem;
+}
+
+main {
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    border-bottom-right-radius: 7rem;
+    max-width: 375px;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+
+form {
+    padding: 2rem 1rem;
+    max-width: 100%;
+}
+
+.input-wrapper {
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container > span {
+    bottom: -20px;
+    color: var(--clr-light-red);
+    font-size: .5rem;
+    left: 0;
+    position: absolute;
+    text-transform: capitalize;
+}
+
+.input-container:first-child {
+    margin-right: var(--margin-input-container);
+}
+
+.input-container:last-child {
+    margin-left: var(--margin-input-container);
+}
+
+label {
+    color: var(--clr-smoke-gray);
+    font-weight: var(--fw-bold);
+    font-size: .75rem;
+    letter-spacing: 5px;
+    margin-bottom: .2rem;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    aspect-ratio: 2.4 / 1;
+    border: 1px solid var(--clr-input-border);
+    border-radius: .3rem;
+    outline: none;
+    padding-left: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+input[type="text"]::placeholder {
+    color: var(--clr-smoke-gray);
+    font-weight: var(--fw-bold);
+    font-size: 1.2rem;
+}
+
+input[type="text"]:active {
+    cursor: pointer;
+}
+
+input[type="text"]:focus {
+    border-color: var(--clr-purple);
+    caret-color: var(--clr-purple);
+}
+
+.button-container {
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+input[type="submit"] {
+    border: none;
+    border-radius: 50%;
+    background-color: var(--clr-purple);
+    background-image: url('../assets/images/icon-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 40% 40%;
+    background-position: center center;
+    min-height: 4rem;
+    min-width: 4rem;
+    position: relative;
+}
+
+input[type="submit"]:active {
+    background-color: var(--clr-off-black);
+    cursor: pointer;
+}
+
+.output-section {
+    padding: 0 1rem;
+}
+
+hr {
+    border-style: solid;
+    border-color: var(--clr-hr);
+    position: absolute;
+    width: 100%;
+}
+
+.output-field > .type {
+    margin-left: .5rem;
+}
+
+.output-field > span {
+    font-size: 3rem;
+    font-weight: var(--fw-extra-bold);
+    font-style: italic;
+}
+
+.output-field > span:not(.type) {
+    color: var(--clr-purple);
+}
+
+@media (max-width: 330px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1440px) {
+    html {
+        font-size: 20px;
+    }
+
+    main {
+        max-width: 700px;
+    }
+
+    form {
+        padding: 2rem var(--padding-container) 0;
+    }
+
+    .input-wrapper {
+        width: 70%;
+    }
+
+    label {
+        font-size: .55rem;
+    }
+
+    .button-container {
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+
+    .output-section {
+        padding: 0 var(--padding-container);
+    }
+
+    .output-field > span {
+        font-size: 4rem;
+    }
+}

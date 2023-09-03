@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/main.css">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+  <main>
+
+    <form class="flex flex-col">
+
+      <div class="input-wrapper flex align-items-center">
+        <div class="input-container flex flex-col justify-center align-items-start days">
+          <label for="days">day</label>
+          <input id="days" type="text" name="days" placeholder="DD">
+          <span></span>
+        </div>
+        <div class="input-container flex flex-col justify-center align-items-start months">
+          <label for="months">month</label>
+          <input id="months" type="text" name="months" placeholder="MM">
+          <span></span>
+        </div>
+        <div class="input-container flex flex-col justify-center align-items-start years">
+          <label for="years">year</label>
+          <input id="years" type="text" name="years" placeholder="YYYY">
+          <span></span>
+        </div>
+      </div>
+      <div class="button-container flex justify-center align-items-center">
+        <hr>
+        <input type="submit" value="">
+      </div>
+
+    </form>
+    
+    <section class="output-section flex flex-col justify-start">
+      <div class="output-field flex justify-start align-items-center years">
+        <span>- -</span>
+        <span class="type">years</span>
+      </div>
+      <div class="output-field flex justify-start align-items-center months">
+        <span>- -</span>
+        <span class="type">months</span>
+      </div>
+      <div class="output-field flex justify-start align-items-center days">
+        <span>- -</span>
+        <span class="type">days</span>
+      </div>
+    </section>
+  </main>
+  <script src="javascript/main.js"></script>
+</body>
+</html>
